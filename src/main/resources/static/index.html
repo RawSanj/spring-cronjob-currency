@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <title>Spring Boot + CronJob + Currencies</title>
+    <link rel="stylesheet" href="/css/bootswatch-sketchy.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/main.css>
+	<link rel=" stylesheet
+    " href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+    <script src="/js/datatable.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+</head>
+
+
+<body>
+
+<br/>
+
+<div class="container" style="text-align:center">
+
+    <div class="card text-warning border-warning">
+        <div class="card-header"><h4><b>BitCoin Rates:</b> <span id="req-id-no"> </span></h4></div>
+        <div class="card-body text-primary">
+            <table id="currencyTable" class="table table-striped table-hover" style="text-align:left">
+                <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Code</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Rate</th>
+                    <th scope="col">CheckedAt</th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+
+
+</div>
+
+<div class="footer">
+
+    <div class="d-flex justify-content-between bd-highlight mb-3">
+        <div class="p-2 bd-highlight">
+            <a class="btn btn-info" href="https://twitter.com/raw_sanj" target="_blank" style="padding-bottom: 2px;">
+                <i class="fa fa-twitter fa-6x" aria-hidden="true"></i> @Raw_Sanj
+            </a>
+        </div>
+        <div class="p-2 bd-highlight">
+            <a class="btn btn-warning float-center" href="https://www.capgemini.com" target="_blank"
+               style="padding-bottom: 2px;">
+                All rights reserved by Capgemini. Copyright <i class="fa fa-copyright fa-6x" aria-hidden="true"></i>
+                2018
+            </a>
+        </div>
+        <div class="p-2 bd-highlight">
+            <a class="btn btn-secondary float-right" href="https://github.com/RawSanj/spring-cronjob-currency"
+               target="_blank" style="padding-bottom: 2px;">
+                <i class="fa fa-github fa-6x" aria-hidden="true"></i> GitHub Repo
+            </a>
+        </div>
+    </div>
+
+</div>
+
+</body>
+
+</html>

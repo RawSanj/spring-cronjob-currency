@@ -1,0 +1,31 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: spring-cronjob-currency-deployment
+  labels:
+    app: spring-cronjob-currency
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spring-cronjob-currency
+  template:
+    metadata:
+      labels:
+        app: spring-cronjob-currency
+    spec:
+      containers:
+      - name: spring-cronjob-currency
+        image: 'rawsanj/spring-cronjob-currency:0.0.1'
+        resources:
+          limits:
+            memory: "512Mi"
+            cpu: "0.2"
+          requests:
+            memory: "512Mi"
+            cpu: "0.2"
+        ports:
+        - containerPort: 8080
+        envFrom:
+        - configMapRef:
+            name: spring-cronjob-currency-config

@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: spring-cronjob-currency-config
+data:
+  MYSQL_DB_HOST: 'mysql-service'
+  MYSQL_DB_PORT: '3306'
+  MYSQL_DATABASE: 'spring-batch-db'
+  DATABASE_USERNAME: 'cronJobUser'
+  DATABASE_PASSWORD: 'SuperSecretMysqlPwd'
+  SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT: 'org.hibernate.dialect.MySQL5Dialect'

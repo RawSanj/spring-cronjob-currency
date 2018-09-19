@@ -29,3 +29,15 @@ spec:
         envFrom:
         - configMapRef:
             name: spring-cronjob-currency-config
+      volumeMounts:
+      - name: service-account-credentials-volume
+        mountPath: /etc/gcp
+        readOnly: true 
+      volumes:
+      - name: service-account-credentials-volume
+        secret:
+          secretName: spring-cronjob-currency-gcp-secret
+          items:
+          - key: gcp-cred
+            path: gcp-cred.json            
+            

@@ -9,3 +9,5 @@ data:
   DATABASE_USERNAME: 'cronJobUser'
   DATABASE_PASSWORD: 'SuperSecretMysqlPwd'
   SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT: 'org.hibernate.dialect.MySQL5Dialect'
+  GOOGLE_APPLICATION_CREDENTIALS: /etc/gcp/gcp-cred.json
+  

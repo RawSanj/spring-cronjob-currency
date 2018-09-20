@@ -6,7 +6,7 @@
 
 	<groupId>com.github.rawsanj</groupId>
 	<artifactId>spring-cronjob-currency</artifactId>
-	<version>0.0.1</version>
+	<version>0.1.8</version>
 	<packaging>jar</packaging>
 
 	<name>spring-cronjob-currency</name>

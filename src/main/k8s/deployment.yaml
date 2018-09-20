@@ -16,28 +16,24 @@ spec:
     spec:
       containers:
       - name: spring-cronjob-currency
-        image: 'rawsanj/spring-cronjob-currency:0.0.1'
+        image: 'rawsanj/spring-cronjob-currency:0.1.8'
         resources:
           limits:
-            memory: "512Mi"
-            cpu: "0.2"
+            memory: "1024Mi"
+            cpu: "0.5"
           requests:
-            memory: "512Mi"
-            cpu: "0.2"
+            memory: "1024Mi"
+            cpu: "0.5"
         ports:
         - containerPort: 8080
         envFrom:
         - configMapRef:
             name: spring-cronjob-currency-config
         volumeMounts:
-        - name: service-account-credentials-volume
-          mountPath: /etc/gcp
-          readOnly: true
+        - name: google-cloud-key
+          mountPath: /var/secrets/google
       volumes:
-      - name: service-account-credentials-volume
+      - name: google-cloud-key
         secret:
-          secretName: spring-cronjob-currency-gcp-secret
-          items:
-          - key: gcp-cred
-            path: gcp-cred.json            
+          secretName: gcp-stackdriver-key
             

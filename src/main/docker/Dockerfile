@@ -1,4 +1,4 @@
-FROM openjdk:8-jre-alpine
+FROM openjdk:8u181-jdk-slim
 VOLUME /tmp
 ADD *.jar app.jar
 RUN sh -c 'touch /app.jar'
